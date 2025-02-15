@@ -1,0 +1,91 @@
+<div class="grid w-full h-full flex justify-content-center">
+
+    <div class="col-10">
+        <div class="grid-nogutter flex flex-column gap-4">
+
+            <div class="col-12">
+                <div
+                    class="grid w-full h-full flex justify-content-center border-2 p-4 surface-border border-round surface-card">
+                    <div class="text-2xl font-semibold flex flex-row col-11 justify-content-between text-primary m-0 p-0">
+                        <p>Live Tracking</p>
+
+                        <p>
+                            <i class="pi pi-circle-off text-red-300 text-2xl" pTooltip="Live"></i>
+                        </p>
+                    </div>
+
+                    <div class="col-11 h-30rem border-2 surface-border border-round p-0">
+                        <img src="test-image.jpg" alt="" class="overflow-hidden w-full h-full border-round" />
+                    </div>
+
+                    <div class="col-11">
+                        <div class="grid w-full flex flex-row justify-content-evenly gap-2 p-4">
+                            <div class="lg:col-3 xl:col-3 sm:col-12 md:col-12 text-center font-medium text-primary-reverse">
+                                Current Status : In Test
+                            </div>
+
+                            <div class="lg:col-2 xl:col-2 sm:col-12 md:col-12 text-center font-medium text-primary-reverse">
+                                Flagged : <span class="text-green-500">False</span>
+                            </div>
+
+                            <div class="lg:col-3 xl:col-3 sm:col-12 md:col-12 text-center font-medium text-primary-reverse">
+                                Start Time : 12:00am
+                            </div>
+
+                            <div class="lg:col-3 xl:col-3 sm:col-12 md:col-12 text-center font-medium text-primary-reverse">
+                                Time Elapsed : 12m 21s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="grid-nogutter w-full flex flex-row justify-content-evenly flex-wrap">
+                    <div class="lg:col-8 xl:col-8 sm:col-12 md:col-12">
+                        <div class="grid w-full h-25rem flex border-2 p-4 surface-border border-round surface-card">
+                            <div class="col-12 text-xl text-primary font-semibold">
+                                Remarks
+                            </div>
+
+                            <div class="col-12">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores accusantium libero excepturi fugit quos,
+                                iusto quisquam repellat distinctio dolore modi! Nesciunt
+                                eius mollitia libero repellat repellendus dolores
+                                voluptatem? Aliquid, exercitationem? Sequi eius sed
+                                tempore adipisci eveniet. Nihil voluptates quae, non
+                                deserunt est commodi omnis, explicabo reiciendis
+                                possimus accusantium rerum saepe.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xl:col-4 lg:col-4 sm:col-12 md:col-12">
+                        <div
+                            class="grid w-full h-25rem flex justify-content-between border-2 p-4 surface-border border-round surface-card">
+                            <div class="col-12 text-xl text-primary font-semibold">
+                                Details
+                            </div>
+
+                            <div class="col-12">
+                                Test Id : {{testId}}
+                            </div>
+                            <div class="col-12">
+                                Dl Number : {{dlNumber}}
+                            </div>
+                            <div class="col-12">
+                                Name : {{name}} {{surname}}
+                            </div>
+                            <div class="col-12">
+                                DOB : {{dob}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

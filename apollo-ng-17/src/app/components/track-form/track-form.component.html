@@ -1,0 +1,62 @@
+<div class="grid flex justify-content-center align-items-center p-4">
+
+    <div class="xl:col-8 lg:col-8 md:col-10 sm:col-12">
+        <div class="grid border-round-xl surface-card p-4 flex flex-column gap-6">
+
+            <div class="col-12 text-3xl text-primary font-semibold text-center">
+                Test Information
+            </div>
+
+            <div class="grid flex flex-row column-gap-4 row-gap-2 w-full justify-content-center">
+
+                <div class="xl:col-5 lg:col-5 md:col-5 sm:col-12">
+                    <p-inputGroup>
+                        <p-inputGroupAddon>
+                            <i class="pi pi-user"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="Test Id" [(ngModel)]="testId" (ngModelChange)="verifyDisabled()"/>
+                    </p-inputGroup>
+                </div>
+
+                <div class="xl:col-5 lg:col-5 md:col-5 sm:col-12">
+                    <p-inputGroup>
+                        <p-inputGroupAddon>
+                            <i class="pi pi-id-card"></i>
+                        </p-inputGroupAddon>
+                        <input pInputText placeholder="DL Number" [(ngModel)]="dlNumber" (ngModelChange)="verifyDisabled()"/>
+                    </p-inputGroup>
+                </div>
+
+                <div class="col-12">
+                    <p-divider />
+                </div>
+
+                <div class="xl:col-5 lg:col-5 md:col-5 sm:col-12">
+                    <label for="firstname">First Name</label>
+                    <input pInputText id="firstname" aria-describedby="username-help" (ngModelChange)="verifyDisabled()" [(ngModel)]="firstName" class="mt-2 w-full"/>
+                </div>
+
+                <div class="xl:col-5 lg:col-5 md:col-5 sm:col-12">
+                    <label for="lastname">Last Name</label>
+                    <input pInputText id="lastname" aria-describedby="username-help" (ngModelChange)="verifyDisabled()" [(ngModel)]="lastName" class="mt-2 w-full"/>
+                </div>
+
+                <div class="xl:col-5 lg:col-5 md:col-5 sm:col-12">
+                    <label for="icondisplay" class="block mb-2"> Date of Birth </label>
+                    <p-calendar [(ngModel)]="dateOfBirth" [iconDisplay]="'input'" (ngModelChange)="verifyDisabled()" [showIcon]="true" inputId="icondisplay" />
+                </div>
+
+            </div>
+
+            <div class="col-12 flex flex-row justify-content-end gap-2">
+                <div class="p-buttonset">
+                    <button [disabled]="disabled" pButton type="button" label="Track" icon="pi pi-check" class="p-button-success" (click)="submit()"></button>
+                    <button pButton type="button" label="Clear" icon="pi pi-times" class="p-button-danger" (click)="clear()"></button>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
