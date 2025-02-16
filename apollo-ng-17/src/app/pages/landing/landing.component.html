@@ -70,11 +70,19 @@
                     </a>
                 </li>
             
-                
                 <li class="flex align-items-center">
-                    <button pButton pRipple type="button" pStyleClass="@grandparent" enterFromClass="ng-hidden"
-                        enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Get Now"
-                        class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap"></button>
+                    <button
+                        pButton
+                        pRipple
+                        type="button"
+                        pStyleClass="@grandparent"
+                        enterFromClass="ng-hidden"
+                        enterActiveClass="px-fadein"
+                        leaveToClass="ng-hidden"
+                        label="Try Now"
+                        class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap"
+                        (click)="router.navigate(['/auth'])">
+                    </button>
                 </li>
             </ul>
          
