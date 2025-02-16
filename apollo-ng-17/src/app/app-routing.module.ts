@@ -3,6 +3,7 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AppLayoutComponent } from './layout/app.layout.component';
 import { TrackFormComponent } from './components/track-form/track-form.component';
 import { TrackDashboardComponent } from './components/track-dashboard/track-dashboard.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routerOptions: ExtraOptions = {
     anchorScrolling: 'enabled'
@@ -19,6 +20,11 @@ const routes: Routes = [
     {
         path: 'home', component: AppLayoutComponent,
         children: [
+            {
+                path : '',
+                data : { breadcrumb: 'Home'},
+                component : HomeComponent
+            }
 
             // { path: 'testlist',
             // data: { breadcrumb: 'Test List' },
