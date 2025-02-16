@@ -13,6 +13,8 @@ const oAuth2Client = new google.auth.OAuth2(
   redirect_uris[0]
 );
 
+
+
 const SCOPES = [
   "https://www.googleapis.com/auth/fitness.activity.read",
   "https://www.googleapis.com/auth/fitness.heart_rate.read",
@@ -23,7 +25,15 @@ const SCOPES = [
 const secretKey = crypto.randomBytes(32).toString("hex");
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(
+  cors({
+    origin: "http://localhost:4200",
+    credentials: true,
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
+
 app.use(session({ secret: secretKey, resave: false, saveUninitialized: true }));
 
 let userProfileData;
@@ -63,7 +73,7 @@ app.get("/auth/google/callback", async (req, res) => {
     userProfileData = await getUserProfile(oAuth2Client);
     console.log("User Profile:", userProfileData);
 
-    res.redirect("http://localhost:3000/dashboard");
+    res.redirect("http://localhost:4200/#/home");
   } catch (error) {
     console.error("OAuth Error:", error);
     res.redirect("/error");
