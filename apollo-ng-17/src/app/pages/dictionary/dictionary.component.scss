@@ -1,0 +1,37 @@
+@import 'src/styles/variables'; // Import global styles if needed
+
+// Define the primary green color from the landing page
+$primary-green: var(--primary-color); 
+
+// Apply styles
+.list-item {
+    background-color: $primary-green;  // Set the background color to green
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; // Ensure text is visible
+}
+
+.animal-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.problem {
+    font-size: 1rem;
+    color: white;
+}
+
+// Adjust spacing
+.grid {
+    gap: 1rem;
+}
+
+// Make sure the background matches the landing page
+.relative {
+    background-color: var(--surface-ground); 
+}
