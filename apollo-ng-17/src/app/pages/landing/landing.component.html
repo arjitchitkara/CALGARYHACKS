@@ -42,38 +42,38 @@
                 </a>
 
                 <li class=" md:mt-0">
-                    <a (click)="router.navigate(['/landing'], {fragment: 'home'})" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/'], {fragment: 'home'})" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], {fragment: 'apps'})" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/'], {fragment: 'apps'})" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
-                        <span>Apps</span>
+                        <span>WildLife</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], {fragment: 'pricing'})" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/'], {fragment: 'pricing'})" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
-                        <span>Pricing</span>
+                        <span>Donate</span>
                     </a>
                 </li>
                 <li>
-                    <a (click)="router.navigate(['/landing'], {fragment: 'features'})" pRipple pStyleClass="@grandparent"
+                    <a (click)="router.navigate(['/'], {fragment: 'features'})" pRipple pStyleClass="@grandparent"
                         enterFromClass="ng-hidden" enterActiveClass="px-fadein" leaveToClass="ng-hidden"
                         class="flex m-0 md:ml-5 px-0 py-3 text-900 font-medium line-height-3 cursor-pointer">
-                        <span>Features</span>
+                        <span>Issues</span>
                     </a>
                 </li>
             
                 
                 <li class="flex align-items-center">
                     <button pButton pRipple type="button" pStyleClass="@grandparent" enterFromClass="ng-hidden"
-                        enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Buy Now"
+                        enterActiveClass="px-fadein" leaveToClass="ng-hidden" label="Get Now"
                         class="m-0 mt-3 md:mt-0 md:ml-5 white-space-nowrap"></button>
                 </li>
             </ul>
@@ -84,21 +84,20 @@
                 class="grid grid-nogutter justify-content-between align-items-center mb-6 py-6 md:mb-8 md:py-8">
                 <div
                     class="col-12 md:col-4 flex flex-column gap-4 flex-order-1 md:flex-order-0 align-items-center md:align-items-start text-center md:text-left">
-                    <span class="block text-900 font-bold text-4xl">Modern, stylish and clean</span>
-                    <span class="block text-700 text-lg">The ultimate collection of design-agnostic, flexible and
-                        accessible UI Components.</span>
+                    <span class="block text-900 font-bold text-4xl">Adopt an Endangered Animal Today</span>
+                    <span class="block text-700 text-lg">Experience the joy of caring for a rare species in a virtual habitat while learning about real-world conservation efforts.</span>
                     <ul class="flex flex-wrap gap-5 list-none p-0">
                         <li class="flex align-items-center">
                             <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">Javascript</span>
+                            <span class="text-900 font-semibold">Polar Bears</span>
                         </li>
                         <li class="flex align-items-center">
                             <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">TypeScript</span>
+                            <span class="text-900 font-semibold">Penguins</span>
                         </li>
                         <li class="flex align-items-center">
                             <div class="p-1 border-circle bg-green-400 inline-block mr-2"></div>
-                            <span class="text-900 font-semibold">Angular</span>
+                            <span class="text-900 font-semibold">Bisons</span>
                         </li>
                     </ul>
                     <button pButton pRipple type="button" label="Live Preview" icon="pi pi-arrow-right" iconPos="right"
@@ -107,187 +106,171 @@
 
                 <div class="col-12 md:col-7 flex-order-0 md:flex-order-1 mb-6 md:mb-0 border-round">
                     <img animateEnter="moveinright"
-                        src="assets/demo/images/landing/{{darkMode ? 'dashboard-dark' : 'dashboard-light'}}.png" alt=""
+                        src="https://media.istockphoto.com/id/877107772/photo/majestic-polar-bear-touching-sea-surface.jpg?s=612x612&w=0&k=20&c=_N41svxXgP4ncjldpDsV1PyQ898ctURqGPnOl_pUrzs=" alt=""
                         class="w-full h-full border-round shadow-2 animation-duration-1000 animation-ease-out">
                 </div>
             </div>
 
             <div id="apps" class="my-6 md:my-8">
-                <span class="text-900 block font-bold text-5xl mb-4 text-center">Apps</span>
-                <span class="text-700 block text-xl mb-8 text-center line-height-3">Lorem ipsum dolor sit, amet
-                    consectetur adipisicing elit. Velit numquam eligendi quos.</span>
+                <span class="text-900 block font-bold text-5xl mb-4 text-center">WildLife</span>
+                <span class="text-700 block text-xl mb-8 text-center line-height-3">  Explore our website and get to know our mission, our animals, and how you can help preserve their habitats.</span>
 
                 <div class="flex flex-column lg:flex-row align-items-center justify-content-between mt-8 gap-8">
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
                             src="assets/demo/images/landing/{{darkMode ? 'chat-dark' : 'chat-light'}}.png" alt="chat"
                             class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Chat</span>
+                        <span class="block text-900 text-lg font-semibold mt-4">Adopt</span>
                     </div>
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
                             src="assets/demo/images/landing/{{darkMode ? 'mail-dark' : 'mail-light'}}.png" alt="chat"
                             class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Mail</span>
+                        <span class="block text-900 text-lg font-semibold mt-4">Track</span>
                     </div>
                     <div class="flex flex-column align-items-center">
                         <img animateEnter="scalein"
                             src="assets/demo/images/landing/{{darkMode ? 'kanban-dark' : 'kanban-light'}}.png"
                             alt="chat"
                             class="w-full h-full border-round surface-border shadow-2 animation-duration-500 origin-top">
-                        <span class="block text-900 text-lg font-semibold mt-4">Kanban</span>
+                        <span class="block text-900 text-lg font-semibold mt-4">Research</span>
                     </div>
                 </div>
             </div>
 
-            <div id="pricing" class="my-6 py-6 md:my-8 md:py-8">
-                <div class="text-900 font-bold text-5xl mb-4 text-center">Pricing Plans</div>
-                <div class="text-700 text-xl mb-8 text-center line-height-3">Choose a plan that works best for you and
-                    your team.</div>
-
+            <div id="pricing" class="my-6 py-6 md:my-8">
+                <div class="text-900 font-bold text-5xl mb-4 text-center">Please Donate</div>
+                <div class="text-700 text-xl mb-8 text-center line-height-3">Support organizations to make a difference.</div>
+            
                 <div class="grid grid-nogutter justify-content-center mt-8">
+                    <!-- NGO 1 - World Wildlife Fund (WWF) -->
                     <div class="col-12 lg:col-6 xl:col-4">
                         <div class="p-3 h-full">
                             <div class="shadow-2 p-6 h-full flex flex-column surface-card" style="border-radius: 6px">
-                                <span class="text-900 block font-medium text-xl mb-2 text-center">Basic Licence</span>
-                                <span class="font-bold block text-2xl text-900 text-center">$29</span>
-
+                                <span class="text-900 block font-medium text-xl mb-2 text-center">World Wildlife Fund (WWF)</span>
                                 <ul class="list-none p-0 m-0 flex-grow-1 mt-6">
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 10 Active Users</span>
+                                        <span>Protects endangered species</span>
                                     </li>
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 30 Project Integrations</span>
+                                        <span>Conserves nature & ecosystems</span>
                                     </li>
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Analytics Module</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-times text-red-500 mr-2"></i>
-                                        <span>Finance Module</span>
+                                        <span>Supports animal welfare</span>
                                     </li>
                                 </ul>
-
-                                <button pButton pRipple label="Choose Plan" class="px-5 w-full mt-6 p-button-outlined"
-                                    icon="pi pi-arrow-right" iconPos="right"></button>
+            
+                                <a href="https://www.worldwildlife.org/pages/ways-to-support-wwf" target="_blank" rel="noopener noreferrer">
+                                    <button pButton pRipple label="Donate Now" class="px-5 w-full mt-6 p-button-outlined"
+                                        icon="pi pi-arrow-right" iconPos="right"></button>
+                                </a>
                             </div>
                         </div>
                     </div>
-
+            
+                    <!-- NGO 2 - Animal Welfare Institute (AWI) -->
                     <div class="col-12 lg:col-6 xl:col-4">
                         <div class="p-3 h-full">
                             <div class="shadow-2 p-6 h-full flex flex-column surface-card" style="border-radius: 6px">
-                                <span class="text-900 block font-medium text-xl mb-2 text-center">Extended
-                                    Licence</span>
-                                <span class="font-bold block text-2xl text-900 text-center">$49</span>
-
+                                <span class="text-900 block font-medium text-xl mb-2 text-center">Animal Welfare Institute</span>
                                 <ul class="list-none p-0 m-0 flex-grow-1 mt-6">
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 10 Active Users</span>
+                                        <span>Helps animals in crisis</span>
                                     </li>
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Up to 30 Project Integrations</span>
+                                        <span>Provides food & healthcare</span>
                                     </li>
                                     <li class="flex align-items-center mb-3">
                                         <i class="pi pi-check text-green-500 mr-2"></i>
-                                        <span>Analytics Module</span>
-                                    </li>
-                                    <li class="flex align-items-center mb-3">
-                                        <i class="pi pi-times text-red-500 mr-2"></i>
-                                        <span>Finance Module</span>
+                                        <span>Provide emergency medical care and shelter.</span>
                                     </li>
                                 </ul>
-
-                                <button pButton pRipple label="Choose Plan" class="px-5 w-full mt-6 p-button-outlined"
-                                    icon="pi pi-arrow-right" iconPos="right"></button>
+            
+                                <a href="https://awionline.org/content/make-donation-awi" target="_blank" rel="noopener noreferrer">
+                                    <button pButton pRipple label="Donate Now" class="px-5 w-full mt-6 p-button-outlined"
+                                        icon="pi pi-arrow-right" iconPos="right"></button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            
 
             <div id="features" class="my-6 py-6 md:my-8 md:py-8">
-                <span class="text-900 block font-bold text-5xl mb-4 text-center">Features</span>
-                <span class="text-700 block text-xl mb-8 text-center line-height-3">PrimeTek Informatics is the author
-                    of PrimeReact, a UI Component vendor with well known vastly popular projects including PrimeFaces,
-                    PrimeNG and PrimeVue.</span>
+                <span class="text-900 block font-bold text-5xl mb-4 text-center">Issues</span>
+                <span class="text-700 block text-xl mb-8 text-center line-height-3">Climate change is drastically affecting the habitats of many endangered species around the world.</span>
 
                 <div class="grid mt-8">
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-components.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">90+ UI Components</span>
-                            <p class="m-0 text-secondary text-700">The ultimate set of UI Components to assist you with
-                                90+ impressive Angular Components.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Polar Bears</span>
+                            <p class="m-0 text-secondary text-700">Arctic sea ice declines by 13% per decade, shrinking vital hunting grounds.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-community.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Community</span>
-                            <p class="m-0 text-secondary text-700">Connect with the other open source community members,
-                                collaborate and have a voice in the project roadmap.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Penguins</span>
+                            <p class="m-0 text-secondary text-700">Some penguin colonies have dropped by over 60% in 50 years due to melting ice and scarce food.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-productivity.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Productivity</span>
-                            <p class="m-0 text-secondary text-700">Boost your productivity by achieving more in less
-                                time and accomplish amazing results.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Rhino</span>
+                            <p class="m-0 text-secondary text-700">Black rhinos declined by over 97% from 1960 to 1995, as erratic rainfall disrupts food sources.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-accessibility.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Accessibility</span>
-                            <p class="m-0 text-secondary text-700">The ultimate set of UI Components to assist you with
-                                90+ impressive Angular Components.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Tiger</span>
+                            <p class="m-0 text-secondary text-700">Up to 70% of the Sundarbans could be underwater by 2070, endangering Bengal tiger breeding grounds.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-support.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Enterprise Support</span>
-                            <p class="m-0 text-secondary text-700">Exceptional support service featuring response within
-                                1 business day and option to request enhancements and new features for the library.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Orangutan</span>
+                            <p class="m-0 text-secondary text-700">Over 80% of orangutan habitat in Borneo may vanish by 2080 due to droughts and deforestation.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-mobile.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Mobile</span>
-                            <p class="m-0 text-secondary text-700">First class support for responsive design led by
-                                touch optimized elements.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Sea Turtle</span>
+                            <p class="m-0 text-secondary text-700">Rising sand temperatures produce up to 99% female hatchlings, risking future population balances.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-theme.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Themes</span>
-                            <p class="m-0 text-secondary text-700">Built on a design-agnostic api, choose from a vast
-                                amount of themes such as material, bootstrap, custom or develop your own.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Koala</span>
+                            <p class="m-0 text-secondary text-700">In 2020, bushfires wiped out up to 70% of some koala populations. 
+                                Heatwaves also reduce the moisture in eucalyptus leaves, their main food.</p>
                         </div>
                     </div>
                     <div class="col-12 md:col-6 xl:col-3 flex justify-content-center p-3">
                         <div class="box p-4 w-full surface-card surface-border border-1 border-round">
                             <img src="assets/demo/images/landing/icon-ts.svg" alt="components icon"
                                 class="block mb-3" />
-                            <span class="text-900 block font-semibold mb-3 text-lg">Typescript</span>
-                            <p class="m-0 text-secondary text-700">Top-notch support for Typescript with types and
-                                tooling assistance.</p>
+                            <span class="text-900 block font-semibold mb-3 text-lg">Elephant</span>
+                            <p class="m-0 text-secondary text-700">Longer droughts reduce water availability and grazing lands, pushing elephants closer to human areas and increasing conflict.</p>
                         </div>
                     </div>
                 </div>
@@ -327,34 +310,12 @@
                 <div class="col-12 md:col-10 lg:col-7">
                     <div class="grid text-center md:text-left">
                         <div class="col-12 md:col-3">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Company</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">About Us</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">News</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Investor Relations</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Careers</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Media Kit</a>
-                        </div>
-
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Resources</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Get Started</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Learn</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Case Studies</a>
-                        </div>
-
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Community</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Discord</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Events</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">FAQ</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Blog</a>
-                        </div>
-
-                        <div class="col-12 md:col-3 mt-4 md:mt-0">
-                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Legal</h4>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Brand Policy</a>
-                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Privacy Policy</a>
-                            <a class="line-height-3 block cursor-pointer text-700">Terms of Service</a>
+                            <h4 class="font-medium text-xl line-height-3 mb-3 text-900">Team</h4>
+                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Sarthak Singh</a>
+                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Arjit Chitkara</a>
+                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Siddharth Sadhwani</a>
+                            <a class="line-height-3 block cursor-pointer mb-2 text-700">Jawad Tahmid</a>
+                            <a class="line-height-3 block cursor-pointer text-700">Sufian Tariq</a>
                         </div>
                     </div>
                 </div>
