@@ -76,11 +76,7 @@
 
     <div class="col-12 xl:col-9">
         <div class="card h-full">
-            <div class="flex align-items-start justify-content-between mb-6">
-                <span class="text-900 text-xl font-semibold">Revenue Overview</span>
-                <p-dropdown [options]="weeks" [(ngModel)]="selectedWeek" styleClass="w-10rem" optionLabel="label" (onChange)="onWeekChange()"></p-dropdown>
-            </div>
-            <p-chart type="bar" [data]="barData" [options]="barOptions" height="300px"></p-chart>
+            <video class="w-full h-full border-round-xl" #videoElement autoplay playsinline></video>
         </div>
     </div>
     <div class="col-12 xl:col-3">

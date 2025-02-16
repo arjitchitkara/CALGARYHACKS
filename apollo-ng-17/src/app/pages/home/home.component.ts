@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Subscription, debounceTime } from 'rxjs';
 import { Product } from 'src/app/demo/api/product';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
@@ -68,7 +68,8 @@ export class HomeComponent implements OnInit, OnDestroy {
             });
     }
 
-    ngOnInit(): void {
+    async ngOnInit(): Promise<void> {
+        await this.startCamera();
         this.weeks = [
             {
                 label: 'Last Week',
@@ -232,6 +233,38 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (this.subscription) {
             this.subscription.unsubscribe();
         }
+        this.stopCamera();
     }
-}
 
+    @ViewChild('videoElement', { static: false }) videoElement!: ElementRef<HTMLVideoElement>;
+    videoStream: MediaStream | null = null;
+
+
+    async startCamera(): Promise<void> {
+      try {
+        if (this.videoStream) {
+          this.stopCamera();
+        }
+
+        this.videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
+
+        if (this.videoElement) {
+          this.videoElement.nativeElement.srcObject = this.videoStream;
+        }
+      } catch (error) {
+        console.error('Error accessing webcam:', error);
+      }
+    }
+
+    stopCamera(): void {
+      if (this.videoStream) {
+        this.videoStream.getTracks().forEach(track => track.stop());
+        this.videoStream = null;
+
+        if (this.videoElement) {
+          this.videoElement.nativeElement.srcObject = null;
+        }
+      }
+    }
+
+}
