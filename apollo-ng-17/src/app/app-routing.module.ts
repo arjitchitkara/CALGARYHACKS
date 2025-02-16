@@ -22,6 +22,7 @@ const routes: Routes = [
         children: [
             {
 
+
                 path : '',
                 data : { breadcrumb: 'Home'},
                 component : HomeComponent
@@ -30,31 +31,14 @@ const routes: Routes = [
                 path : 'browse',
                 data : { breadcrumb : 'Browse'},
                 component : BrowseComponent
+
             }
-
-            // { path: 'testlist',
-            // data: { breadcrumb: 'Test List' },
-            // component: ListComponent,
-            // },
-
-            // { path: 'track',
-            //     data: { breadcrumb: 'Tracking' },
-            //     component: TrackComponent,
-            //     children : [
-            //         {
-            //             path: '',
-            //             component: TrackFormComponent,
-            //             data: { breadcrumb: 'authorize'}
-            //         },
-            //         {
-            //             path: ':testId',
-            //             component: TrackDashboardComponent,
-            //             data: { breadcrumb: 'Live'}
-            //         }
-            //     ]
-            // }
-
         ]
+    },
+    // ✅ Added Dictionary Page Route
+    {
+        path: 'dictionary',
+        loadChildren: () => import('./pages/dictionary/dictionary.module').then(m => m.DictionaryModule)
     },
     { path: 'landing', loadChildren: () => import('./demo/components/landing/landing.module').then(m => m.LandingModule) },
     { path: 'notfound', loadChildren: () => import('./demo/components/notfound/notfound.module').then(m => m.NotfoundModule) },
