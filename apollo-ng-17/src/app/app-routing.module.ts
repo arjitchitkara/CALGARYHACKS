@@ -10,40 +10,23 @@ const routerOptions: ExtraOptions = {
 
 const routes: Routes = [
     {
-        path : '', loadChildren: () => import ('./pages/landing/landing.module').then(m => m.LandingModule)
+        path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule)
     },
     {
-        path : 'auth', loadChildren: () => import ('./pages/auth/auth.module').then(m => m.AuthModule)
+        path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
     },
-
     {
         path: 'home', component: AppLayoutComponent,
         children: [
-
-            // { path: 'testlist',
-            // data: { breadcrumb: 'Test List' },
-            // component: ListComponent,
-            // },
-
-            // { path: 'track',
-            //     data: { breadcrumb: 'Tracking' },
-            //     component: TrackComponent,
-            //     children : [
-            //         {
-            //             path: '',
-            //             component: TrackFormComponent,
-            //             data: { breadcrumb: 'authorize'}
-            //         },
-            //         {
-            //             path: ':testId',
-            //             component: TrackDashboardComponent,
-            //             data: { breadcrumb: 'Live'}
-            //         }
-            //     ]
-            // }
+            {
+                path: 'track',
+                children: [
+                    { path: '', component: TrackFormComponent },
+                    { path: ':testId', component: TrackDashboardComponent }
+                ]
+            }
         ]
     },
-    { path: 'auth', data: { breadcrumb: 'Auth' }, loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },
     { path: 'landing', loadChildren: () => import('./demo/components/landing/landing.module').then(m => m.LandingModule) },
     { path: 'notfound', loadChildren: () => import('./demo/components/notfound/notfound.module').then(m => m.NotfoundModule) },
     { path: '**', redirectTo: '/notfound' }
