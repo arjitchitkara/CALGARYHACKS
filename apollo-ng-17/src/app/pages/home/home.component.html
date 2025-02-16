@@ -89,60 +89,20 @@
     </div>
     <div class="col-12 xl:col-3">
         <div class="card h-full">
-            <div class="text-900 text-xl font-semibold mb-6">Sales by Category</div>
-            <p-chart type="pie" [data]="pieData" [options]="pieOptions" height="300px"></p-chart>
+
         </div>
     </div>
 
     <div class="col-12 lg:col-8">
         <div class="card">
             <div class="flex flex-column md:flex-row md:align-items-start md:justify-content-between mb-3">
-                <div class="text-900 text-xl font-semibold mb-3 md:mb-0">Recent Sales</div>
                 <div class="inline-flex align-items-center">
                     <span class="p-input-icon-left flex-auto">
-                        <i class="pi pi-search"></i>
-                        <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Search" class="w-full" style="border-radius: 2rem"/>
+                        <!-- Add the map component here -->
+                        <app-map></app-map>
                     </span>
-                    <button pButton pRipple icon="pi pi-upload" class="p-button-rounded mx-3" (click)="dt.exportCSV()"></button>
                 </div>
             </div>
-            <p-table #dt [value]="products" [columns]="cols" [paginator]="true" [rows]="5" responsiveLayout="scroll" [globalFilterFields]="['name','category','inventoryStatus']">
-                <ng-template pTemplate="header">
-                    <tr>
-                        <th pSortableColumn="name" style="min-width:12rem" class="white-space-nowrap">Name
-                            <p-sortIcon field="name"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="category" style="min-width:10rem" class="white-space-nowrap">Category
-                            <p-sortIcon field="category"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="price" style="min-width:10rem" class="white-space-nowrap">Price
-                            <p-sortIcon field="price"></p-sortIcon>
-                        </th>
-                        <th pSortableColumn="inventoryStatus" style="min-width:10rem" class="white-space-nowrap">Status
-                            <p-sortIcon field="inventoryStatus"></p-sortIcon>
-                        </th>
-                        <th></th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-product>
-                    <tr>
-                        <td>{{product.name}}</td>
-                        <td>
-                            <span class="p-column-title">Category</span>
-                            {{product.category}}</td>
-                        <td>
-                            <span class="p-column-title">Price</span>
-                            {{product.price | currency:'USD'}}</td>
-                        <td>
-                            <span class="p-column-title">Status</span>
-                            <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
-                        </td>
-                        <td style="text-align: center">
-                            <button pButton type="button" icon="pi pi-search" class="p-button-outlined p-button-rounded"></button>
-                        </td>
-                    </tr>
-                </ng-template>
-            </p-table>
         </div>
     </div>
     <div class="col-12 lg:col-4">
