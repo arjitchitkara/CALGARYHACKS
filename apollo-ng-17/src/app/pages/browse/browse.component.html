@@ -1,0 +1,31 @@
+<p>browse works!</p>
+<div class="p-grid p-justify-center p-mt-5 p-mb-5">
+    <!-- Loop through each animal -->
+    <div class="p-col-12 p-md-6 p-lg-4" *ngFor="let animal of animals">
+      <!-- Animal Card -->
+      <div class="p-shadow-2 p-p-3 p-m-2 surface-card border-round text-center">
+        <!-- Animal Image -->
+        <img
+          [src]="animal.image"
+          [alt]="animal.name"
+          class="animal-image p-mb-3"
+        />
+  
+        <!-- Animal Name -->
+        <h2 class="text-900 font-bold p-mb-1">{{ animal.name }}</h2>
+  
+        <!-- Animal Description -->
+        <p class="text-700 p-mb-3">{{ animal.description }}</p>
+  
+        <!-- Adopt Button -->
+        <button
+          pButton
+          label="Adopt"
+          class="p-button-success p-button-rounded"
+          icon="pi pi-heart-fill"
+          (click)="adoptAnimal(animal)"
+        ></button>
+      </div>
+    </div>
+  </div>
+  
