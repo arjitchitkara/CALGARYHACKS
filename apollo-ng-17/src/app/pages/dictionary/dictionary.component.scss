@@ -1,0 +1,32 @@
+.dictionary-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .animal-card {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  

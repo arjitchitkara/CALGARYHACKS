@@ -1,1 +1,12 @@
-<p>dictionary works!</p>
+<div class="dictionary-container">
+    <h2 class="title">Endangered Animals</h2>
+    <p class="subtitle">Learn about species that need urgent protection.</p>
+  
+    <div class="animal-list">
+      <div class="animal-card" *ngFor="let animal of endangeredAnimals">
+        <h3>{{ animal.name }}</h3>
+        <p>{{ animal.description }}</p>
+      </div>
+    </div>
+  </div>
+  
