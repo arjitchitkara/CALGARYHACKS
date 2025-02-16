@@ -38,6 +38,33 @@ app.post("/create-room", async (req, res) => {
   }
 });
 
+// **API to start a live video stream**
+app.post("/start-live-video", async (req, res) => {
+  try {
+    const { streamName, isPrivate } = req.body;
+
+    // Create a new Daily.co room for live video
+    const response = await axios.post(
+      `${DAILY_API}/rooms`,
+      {
+        name: streamName || `live-stream-${Date.now()}`,
+        privacy: isPrivate ? "private" : "public",
+        properties: {
+          exp: Math.floor(Date.now() / 1000) + 3600, // Room expires in 1 hour
+        },
+      },
+      dailyHeaders
+    );
+
+    return res.json({ success: true, url: response.data.url });
+  } catch (error) {
+    console.error("Error starting live video:", error.response.data);
+    return res
+      .status(500)
+      .json({ success: false, message: error.response.data });
+  }
+});
+
 // **API to list all video rooms**
 app.get("/list-rooms", async (req, res) => {
   try {
