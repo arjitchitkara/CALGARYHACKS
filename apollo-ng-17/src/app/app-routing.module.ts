@@ -4,6 +4,7 @@ import { AppLayoutComponent } from './layout/app.layout.component';
 import { TrackFormComponent } from './components/track-form/track-form.component';
 import { TrackDashboardComponent } from './components/track-dashboard/track-dashboard.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BrowseComponent } from './pages/browse/browse.component';
 
 const routerOptions: ExtraOptions = {
     anchorScrolling: 'enabled'
@@ -24,6 +25,11 @@ const routes: Routes = [
                 path : '',
                 data : { breadcrumb: 'Home'},
                 component : HomeComponent
+            },
+            {
+                path : 'browse',
+                data : { breadcrumb : 'Browse'},
+                component : BrowseComponent
             }
 
             // { path: 'testlist',
